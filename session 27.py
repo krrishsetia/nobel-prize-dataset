@@ -20,7 +20,7 @@ import multiprocessing
 pd.options.display.max_columns = 2
 pd.options.display.max_rows = 10000000
 
-data = pd.read_csv('csv files/nobel-prize-laureates.csv',sep=';')
+data = pd.read_csv('nobel-prize-laureates.csv',sep=';')
 
 data.drop(['Overall motivation','Born country code','Died country code','Organization city','Geo Shape','Geo Point 2D','Born city','Died city','Motivation','Organization name','Organization country','Firstname','Surname','Born country','Died country'],axis=1,inplace=True)
 data['Died_sep'] = data['Died'].str.split('-')
